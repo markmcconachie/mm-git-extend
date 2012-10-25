@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = "MM Git Extend"
+  s.name        = "mm-git-extend"
   s.version     = "0.1.0"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Mark McConachie"]
