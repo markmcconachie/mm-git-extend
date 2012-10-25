@@ -25,3 +25,7 @@ Feature: feature branch creation
     Given I have uncommited changes
     When I run `git feature test`
     Then I should be on a branch called "feat/test"
+
+  Scenario: run with no branch
+    When I run `git feature`
+    Then the output should contain "No branch name given"

@@ -14,13 +14,13 @@ def branch_name
   [OPTS[:prefix], ARGV[0]].join("/")
 end
 
+raise "git: No branch name given" unless ARGV[0]
+
 OPTS = {
   :prefix => 'feat'
 }
 
 op = OptionParser.new do |x|
-    x.separator ''
-
     x.on("-p", "--prefix [OPT]", "Branch prefix") do |n|
       OPTS[:prefix] = n
     end
