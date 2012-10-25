@@ -1,10 +1,17 @@
 # Git extensions
 
-Some git extensions
+Install with 
 
-## Feature
+    gem install mm-git-extend 
+
+## git feature
+
+    git feature [new_feature]
 
 Creates feature branches with a feat/ prefix.
+
+If a feature branch already exists, it checks it out.
+
 Takes an argument --prefix to determin the prefix.
 
 ## Useful aliases
