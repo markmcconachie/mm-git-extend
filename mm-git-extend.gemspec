@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Mark's Git extensions}
   s.description = %q{Some (hopefully) userful git extensions}
 
+  s.add_development_dependency "cucumber"
   s.add_development_dependency "aruba"
 
   s.files         = `git ls-files`.split("\n")

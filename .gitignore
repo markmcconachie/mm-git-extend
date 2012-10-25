@@ -13,3 +13,5 @@ Icon
 
 tmp
 *.gem
+
+Gemfile.lock
