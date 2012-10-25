@@ -14,7 +14,7 @@ def branch_name
   [OPTS[:prefix], ARGV[0]].join("/")
 end
 
-raise "git: No branch name given" unless ARGV[0]
+abort "git: No branch name given" unless ARGV[0]
 
 OPTS = {
   :prefix => 'feat'
