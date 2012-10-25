@@ -16,5 +16,5 @@ Takes an argument --prefix to determin the prefix.
 
 ## Useful aliases
 
-    git config --global alias.feat 'feature -p exp'
+    git config --global alias.feat 'feature'
     git config --global alias.exp 'feature -p exp'
