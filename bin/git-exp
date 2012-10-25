@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git feature $1 --prefix exp

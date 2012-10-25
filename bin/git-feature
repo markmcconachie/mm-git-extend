@@ -1,0 +1,35 @@
+#!/usr/bin/ruby
+
+require 'optparse'
+
+def git(command)
+  system("git " + command)
+end
+
+def branch_exists?(branch)
+  `git branch`.include? " " + branch
+end
+
+def branch_name
+  [OPTS[:prefix], ARGV[0]].join("/")
+end
+
+OPTS = {
+  :prefix => 'feat'
+}
+
+op = OptionParser.new do |x|
+    x.separator ''
+
+    x.on("-p", "--prefix [OPT]", "Branch prefix") do |n|
+      OPTS[:prefix] = n
+    end
+end
+op.parse!(ARGV)
+
+if branch_exists?(branch_name)
+  puts "git: Branch already exists. Switching to '#{branch_name}'"
+  git "checkout " + branch_name
+else
+  git "checkout -b " + branch_name
+end
